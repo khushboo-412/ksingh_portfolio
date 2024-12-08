@@ -1,0 +1,137 @@
+{
+    "personalInfo": {
+      "name": "Khushboo Singh",
+      "email": "khusingh@cs.stonybrook.edu",
+      "linkedin": "https://linkedin.com/in/khushboo-singh-k412/",
+      "github": "https://github.com/khushboo-412/",
+      "google_scholar": "https://github.com/khushboo-412/",
+      "about": "Hello! I’m Khushboo Singh, a Computer Science Master's student at Stony Brook University. I am passionate about solving complex problems using technology, exploring advanced machine learning models, and working with cutting-edge AI frameworks. I enjoy collaborating with teams, contributing to open-source projects, and sharing my expertise through community involvement and mentorship."
+    },
+    "education": [
+      {
+        "degree": "M.S. in Computer Science",
+        "institution": "Stony Brook University, New York, USA",
+        "timeframe": "Aug 2023 - May 2025 (pursuing)",
+        "advisor": "Prof. H. Andrew Schwartz",
+        "gpa": "3.8/4",
+        "coursework": [
+          "Natural Language Processing",
+          "Machine Learning",
+          "Topics in Data Science",
+          "Theory of Database Systems",
+          "Theory of Computation",
+          "Hybrid Systems"
+        ]
+      },
+      {
+        "degree": "B. Tech. in Electrical Engineering and Computer Science",
+        "institution": "Dayalbagh Educational Institute, India",
+        "timeframe": "Jul 2016 - Jun 2020",
+        "advisor": "Prof. C. Patvardhan",
+        "gpa": "9.4/10",
+        "coursework": [
+          "Neural Networks",
+          "Digital Image Processing",
+          "Quantum Computing",
+          "Operating Systems",
+          "Software Engineering",
+          "Data Structures",
+          "Computer Architecture",
+          "Design and Analysis of Algorithms",
+          "Computer Networks",
+          "Digital Systems"
+        ]
+      }
+    ],
+    "publications": [
+      {
+        "title": "Commodity Market Forecasting using Natural Language Processing",
+        "conference": "25th ACM Conference on Economics and Computation",
+        "venue": "Yale University",
+        "date": "July 2024",
+        "type": "Poster Presentation"
+      },
+      {
+        "title": "Commodity Markets LLM-based Futures Forecasting",
+        "conference": "SAEA Annual Meeting 2025",
+        "venue": "Irving, Texas",
+        "date": "2025",
+        "type": "Paper Proposal Accepted"
+      }
+    ],
+    "academicProjects": [
+      {
+        "title": "Master’s Thesis at HLAB",
+        "institution": "Stony Brook University",
+        "timeframe": "May 2024 – present",
+        "projectDescription": "Investigating the Efficacy of Open Large Language Models in Understanding Human Psychological States and Traits.",
+        "details": [
+          "Analyzed DS4UD dataset with various LLMs (RoBERTa, BERT, DeBERTa, GPT-2, XLNet, Llama2, Llama3, T5, FLAN T5).",
+          "Performed multi-level psychological analysis for mental health indicators, personality traits, and emotional states.",
+          "Compared embedding-based vs. prompting techniques, and evaluated autoencoders, autoregressive, encoder-decoder models."
+        ]
+      }
+    ],
+    "professionalExperience": [
+      {
+        "role": "Senior Research Aide",
+        "organization": "The Research Foundation for SUNY",
+        "timeframe": "Sep 2024 – present",
+        "description": [
+          "Analyzed speech data with transformer-based and lexical models.",
+          "Used OpenAI’s Whisper to identify PTSD symptoms.",
+          "Supported World Trade Center Health Program’s mission on mental well-being."
+        ]
+      }
+    ],
+    "skills": {
+      "programmingLanguages": ["Python", "JAVA", "Dart", "C", "Go"],
+      "operatingSystems": ["Windows", "MacOS", "Linux"],
+      "frameworksAndTechnologies": [
+        "TensorFlow", "PyTorch", "Flutter", "AWS", "Git", "MATLAB", "ReactJS",
+        "DLATK", "OpenCV", "Keras", "Figma", "MapReduce", "HDFS", "Google File System", "Spark"
+      ]
+    },
+    "awards": [
+      {
+        "name": "Outstanding Employee Recognition",
+        "year": "2022",
+        "awardedBy": "Indeses Business Ventures Pvt Ltd"
+      },
+      {
+        "name": "Undergraduate Research Award",
+        "year": "2019",
+        "awardedBy": "Department of Physics & Computer Science, Dayalbagh Educational Institute"
+      }
+    ],
+    "leadership": [
+      {
+        "position": "Vice President",
+        "organization": "Sky Campus Happiness Club, Stony Brook University",
+        "timeframe": "May 2024 - present"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Go: The Complete Developer's Guide (Golang)",
+        "link": "https://www.udemy.com/course/go-the-complete-developers-guide/"
+      },
+      {
+        "name": "Docker for absolute beginners: Online Project",
+        "link": "https://www.katacoda.com/courses/docker"
+      },
+      {
+        "name": "Supervised Machine Learning: Regression and Classification",
+        "link": "https://www.coursera.org/learn/machine-learning"
+      },
+      {
+        "name": "Unsupervised Learning, Recommenders, Reinforcement Learning",
+        "link": "https://www.coursera.org/learn/machine-learning-projects"
+      },
+      {
+        "name": "Advanced Learning Algorithm",
+        "link": "https://www.coursera.org/learn/advanced-learning-algorithms"
+      }
+    ]
+  }
+  

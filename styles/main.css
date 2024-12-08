@@ -1,0 +1,290 @@
+:root {
+  --color-bg: #fdfdfd;
+  --color-text: #2c2c2c;
+  --color-accent: #728cba;
+  --color-muted: #666;
+  --color-card-bg: #ffffff;
+  --font-base: 'Inter', sans-serif;
+  --max-width: 1000px;
+  --transition-speed: 0.3s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-base);
+  font-size: 16px;
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to right, #0055aa, #a4c2f4);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+.header__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.header__logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav__link {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color var(--transition-speed);
+}
+.nav__link:hover {
+  color: #ffcc33;
+}
+.nav__link.nav__link--active {
+  border-bottom: 4px solid #ffcc33;
+}
+
+/* Mobile Nav Toggle */
+.nav__toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+}
+.nav__toggle div {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  transition: transform var(--transition-speed);
+}
+
+@media (max-width: 800px) {
+  .nav {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-speed) ease-in-out;
+  }
+  .nav.open {
+    max-height: 300px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .nav__link {
+    color: var(--color-text);
+  }
+  .nav__link:hover {
+    color: var(--color-accent);
+  }
+
+  .nav__toggle {
+    display: flex;
+  }
+}
+
+main {
+  padding-top: 80px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 80px 1rem 2rem 1rem;
+}
+
+section {
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+/* Make section headers sticky */
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-accent);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 60px;
+  background: var(--color-bg);
+  padding: 0.5rem 0;
+  z-index: 500;
+  border-bottom: 1px solid #eee;
+  border-radius: 8px;
+}
+
+/* About Section Layout */
+.about__container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+
+}
+
+.about__image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Changed from flex-start to center */
+  gap: 0.5rem;
+}
+
+.about__contacts a img {
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+.about__image {
+  width: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.about__details {
+  flex: 1;
+}
+.about__description {
+  margin-bottom: 1rem;
+}
+.about__contacts a {
+  display: inline-block;
+  margin: 0.5rem 0;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+.about__contacts a:hover {
+  text-decoration: underline;
+}
+
+/* Card Layout */
+.card-list {
+  display: grid;
+  grid-gap: 1.5rem;
+}
+
+@media (min-width: 501px) and (max-width: 999px) {
+  .card-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .card-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card {
+  background: var(--color-card-bg);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.1);
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  overflow: hidden;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+.card p {
+  margin: 0.25rem 0;
+  color: var(--color-text);
+}
+.card p strong {
+  color: var(--color-text);
+}
+
+/* Indentation for key-value pairs: use .info-line */
+.info-line {
+  display: flex;
+  margin: 0.3rem 0;
+}
+.info-line strong {
+  min-width: 140px;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+.info-line span {
+  margin-left: 1rem;
+  color: var(--color-text);
+}
+
+/* For lists inside cards (like descriptions, details) */
+.card ul {
+  padding-left: 1.5rem;
+  margin: 0.5rem 0 0 0;
+}
+
+/* Skills List */
+#skillsList p {
+  margin: 0.5rem 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  background: linear-gradient(to right, #a4c2f4, #0055aa);
+  color: #fff;
+}
+
+/* Fade-in animation for sections */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--transition-speed) ease-out, transform var(--transition-speed) ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hover effects for links in about section */
+#personalInfo a {
+  color: var(--color-accent);
+}
+#personalInfo a:hover {
+  text-decoration: underline;
+}
