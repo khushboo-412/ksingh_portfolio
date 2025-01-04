@@ -5,7 +5,7 @@
       "linkedin": "https://linkedin.com/in/khushboo-singh-k412/",
       "github": "https://github.com/khushboo-412/",
       "google_scholar": "https://github.com/khushboo-412/",
-      "about": "Hello! I’m Khushboo Singh, a Computer Science Master's student at Stony Brook University. I am passionate about solving complex problems using technology, exploring advanced machine learning models, and working with cutting-edge AI frameworks. I enjoy collaborating with teams, contributing to open-source projects, and sharing my expertise through community involvement and mentorship."
+      "about": "I am currently pursuing a Master’s in Computer Science at Stony Brook University, where my research focuses on the transformative potential of Natural Language Processing (NLP) in modeling human behavior and affective states. My goal is to develop emotionally aware AI systems capable of interpreting complex psychological contexts using multimodal data, addressing challenges such as mental health diagnostics and enhancing emotional intelligence. Building on advancements in sentiment analysis and emotion recognition, I aim to create robust, interpretable NLP systems that bridge technical innovation and societal well-being, preparing for a future where technology serves as a force for inclusion and transformation."
     },
     "education": [
       {
@@ -13,10 +13,11 @@
         "institution": "Stony Brook University, New York, USA",
         "timeframe": "Aug 2023 - May 2025 (pursuing)",
         "advisor": "Prof. H. Andrew Schwartz",
-        "gpa": "3.8/4",
+        "gpa": "3.87/4",
         "coursework": [
           "Natural Language Processing",
           "Machine Learning",
+          "Artificial Intelligence",
           "Topics in Data Science",
           "Theory of Database Systems",
           "Theory of Computation",
@@ -28,7 +29,7 @@
         "institution": "Dayalbagh Educational Institute, India",
         "timeframe": "Jul 2016 - Jun 2020",
         "advisor": "Prof. C. Patvardhan",
-        "gpa": "9.4/10",
+        "gpa": "9.36/10",
         "coursework": [
           "Neural Networks",
           "Digital Image Processing",
@@ -45,32 +46,87 @@
     ],
     "publications": [
       {
+        "title": "A Systematic Evaluation of Transformer-LM Representations for Capturing Author States and Traits",
+        "conference": "Association for Computational Linguistics (ACL 2024) Rolling Review",
+        "venue": "",
+        "type": "Paper Sumbitted",
+        "authors": "Khushboo Singh, Vasudha Varadarajan, Adithya V. Ganesan, August Håkan Nilsson, Syeda Mahwish, Ryan L. Boyd, Lyle Ungar, Richard N. Rosenthal, H. Andrew Schwartz"
+      },
+      {
         "title": "Commodity Market Forecasting using Natural Language Processing",
         "conference": "25th ACM Conference on Economics and Computation",
-        "venue": "Yale University",
+        "venue": ", Yale University",
         "date": "July 2024",
-        "type": "Poster Presentation"
+        "type": "Poster Presentation",
+        "authors": "Khushboo Singh, Dana Golden, Dikshya Mohanty"
       },
       {
         "title": "Commodity Markets LLM-based Futures Forecasting",
         "conference": "SAEA Annual Meeting 2025",
-        "venue": "Irving, Texas",
+        "venue": ", Irving, Texas",
         "date": "2025",
-        "type": "Paper Proposal Accepted"
+        "type": "Paper Proposal Accepted",
+        "authors": "Dana Golden, Dikshya Mohanty, Khushboo Singh"
       }
     ],
     "academicProjects": [
       {
-        "title": "Master’s Thesis at HLAB",
+        "projectDescription": "Master’s Thesis at HLAB",
         "institution": "Stony Brook University",
         "timeframe": "May 2024 – present",
-        "projectDescription": "Investigating the Efficacy of Open Large Language Models in Understanding Human Psychological States and Traits.",
+        "title1": "Investigating the Efficacy of Open Large Language Models in Understanding Human Psychological States and Traits",
+        "title":"Master’s Thesis at Human Language Analysis Beings (HLAB), Stony Brook University ",
         "details": [
-          "Analyzed DS4UD dataset with various LLMs (RoBERTa, BERT, DeBERTa, GPT-2, XLNet, Llama2, Llama3, T5, FLAN T5).",
-          "Performed multi-level psychological analysis for mental health indicators, personality traits, and emotional states.",
-          "Compared embedding-based vs. prompting techniques, and evaluated autoencoders, autoregressive, encoder-decoder models."
-        ]
+          "Utilized a wide range of LLM architectures—including RoBERTa, BERT, DeBERTa, GPT-2, XLNet, Llama2, Llama3, T5, and FLAN T5—to analyze the Data Science for Unhealthy Drinking (DS4UD) dataset, focusing on individuals with alcohol and substance use disorders.",
+          "Conducted Multi-Level Psychological Analysis to predict mental health indicators, personality traits, and emotional states (e.g., valence, arousal, anxiety, depression, and BIG-5 traits) by performing analyses at individual message level, two-week intervals, and comprehensive user profiles, uncovering temporal and contextual language patterns.",
+          "Assessed the effectiveness of different LLM types—autoencoders, autoregressive models, and encoder-decoder models—and contrasted embedding-based methods with prompting techniques to determine optimal approaches for modelling latent psychological constructs."
+          ]
+      },
+      {
+       
+        "title1": "Energy-related Commodities Market Analysis",
+        "details": [
+          "Developed a hybrid NLP and time-series forecasting model to predict future prices of commodities supported by economically sound explanations for price movements by integrating numerical data (prices) and textual data (EIA reports).",
+"Developed a time-series forecasting model utilizing a Time Series Transformer (TST), achieving MSE of 0.097 and MAPE of 0.26 when forecasting oil and natural gas prices, significantly outperforming traditional ARIMA models",
+"Pioneered Instruction Tuning using LLAMA2 (7B) and GPT2 (355M) models to generate economically sound explanations for price movements, implementing Parameter-Efficient Fine-Tuning (PEFT) with LoRA on LLAMA2 (reducing trainable parameters to 12.4% of the total) and full fine-tuning on GPT2.",
+"Developed cascading and joint model architectures to integrate outputs from the Time Series Transformer and LLAMA2, enhancing interpretability and robustness in commodity price forecasting and explanation tasks, thereby effectively bridging the gap between machine learning and economic analysis."
+
+          ]
+      },
+      {
+       
+        "title1": "LegiMed AI",
+        "details": [
+          "Developed an advanced medical document summarization system that combines LLaMA3, few-shot learning, and Chain-of-Thought prompting to generate step-by-step, concise, and legally relevant summaries tailored for lawyers.",
+"Designed and implemented a Retrieval-Augmented Generation (RAG) pipeline, integrating Facebook AI Similarity Search (FAISS) for efficient similarity search and PubMedBERT embeddings for domain-specific understanding, retrieving accurate context from datasets to improve the quality and relevance of summaries.",
+"Conducted comprehensive benchmarking by experimenting with state-of-the-art models such as T5, Flan-T5, BART, BioBART, and ChatGPT-4, evaluating contextual accuracy, domain specificity, and legal relevance to optimize model performance and workflow efficiency."
+          ]
+      },
+      {
+       
+        "title1": "Privacy Compliance Framework for Medical Mobile Apps ",
+        "details": [
+          "Developed a custom GPT model using OpenAI API to detect conditions and negations related to Personally Identifiable Information (PII) in privacy policies, achieving an 85% accuracy in identifying personal data mentions and discrepancies between privacy policies and app permissions. ",
+          "Utilized dependency parsing to systematically analyze conditions within privacy documents.",
+          "Implemented zero-shot and few-shot prompt engineering techniques to extract critical privacy compliance information."
+          ]
+      },
+      {
+       
+        "title1": "Analysis of Substance Use Treatment Admissions",
+        "details": [
+          "Utilizing Java, developed two key Hadoop programs to process and sort admissions by age and year, revealing insightful patterns over time, and efficiently identified distinct CBSAs using Hadoop's identity mapper and reducer concepts in Treatment Episode Data Set covering the years 2000 to 2019 (5.37 GB), to identify trends in admissions across different age groups and to pinpoint the unique Core Based Statistical Areas represented in the data. ",
+          "Replicated the age-year analysis using Spark to demonstrate improved processing speeds and data handling capabilities."
+          ]
+      },
+      {
+       
+        "title1": "Face Recognition-based Attendance System ",
+        "details": [
+          "Developed an advanced automated attendance system in Python using computer vision and machine learning algorithms for real-time facial recognition, implementing Haar cascades with OpenCV’s XML classifiers for robust face detection.", "Designed a multi-algorithm face recognition system by integrating Eigenface (PCA), Fisherface (LDA), and Local Binary Pattern Histogram (LBPH) in an ensemble model, enhancing accuracy through feature combination and comparative analysis."
+          ]
       }
+
     ],
     "professionalExperience": [
       {
