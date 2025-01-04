@@ -82,9 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="${info.github}" target="_blank">
         <img src="images/github-icon.png" alt="GitHub Icon" style="width:20px;vertical-align:middle;"/>
         </a>
-        <a href="${info.google_scholar}" target="_blank">
-        <img src="images/google-scholar-icon.png" alt="Google Scholar Icon" style="width:20px;vertical-align:middle;"/>
-        </a>
+         <!-- Commented Google Scholar -->
+    <!-- <a href="${info.google_scholar}" target="_blank">
+    <img src="images/google-scholar-icon.png" alt="Google Scholar Icon" style="width:20px;vertical-align:middle;"/>
+    </a> -->
     `;
 
   }
@@ -111,8 +112,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return `
         <div class="card">
           <h3>${pub.title}</h3>
-          <div class="info-line"><strong>Conference:</strong><span>${pub.conference}, ${pub.venue}</span></div>
-          <div class="info-line"><strong>Date:</strong><span>${pub.date}</span></div>
+          <div class="info-line"><strong>Conference:</strong><span>${pub.conference}${pub.venue}</span></div>
+          <div class="info-line"><strong>Authors:</strong><span>${pub.authors}</span></div>
+          <!--  <div class="info-line"><strong>Date:</strong><span>${pub.date}</span></div>  -->
           <div class="info-line"><strong>Type:</strong><span>${pub.type}</span></div>
         </div>
       `;
@@ -124,10 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = projectsArray.map(project => {
       return `
         <div class="card">
-          <h3>${project.title}</h3>
-          ${project.institution ? `<div class="info-line"><strong>Institution:</strong><span>${project.institution}</span></div>` : ''}
-          <div class="info-line"><strong>Timeframe:</strong><span>${project.timeframe}</span></div>
-          <p>${project.projectDescription}</p>
+          <h3>${project.title1}</h3>
           <ul>
             ${project.details.map(detail => `<li>${detail}</li>`).join('')}
           </ul>
