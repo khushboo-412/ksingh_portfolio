@@ -130,23 +130,56 @@
     ],
     "professionalExperience": [
       {
-        "role": "Senior Research Aide",
+        "role": "Senior Research Aide at The Research Foundation for SUNY",
         "organization": "The Research Foundation for SUNY",
         "timeframe": "Sep 2024 – present",
         "description": [
-          "Analyzed speech data with transformer-based and lexical models.",
-          "Used OpenAI’s Whisper to identify PTSD symptoms.",
-          "Supported World Trade Center Health Program’s mission on mental well-being."
+          "Utilized transformer-based language models (RoBERTa) and topic modeling, alongside OpenAI’s Whisper, to analyze linguistic patterns and uncover themes indicative of mental health conditions such as Post-traumatic stress disorder (PTSD), depression (PHQ-9), and alcohol use (AUDIT) in 9/11 responders' speech data.  ",
+          "Developed and optimized AI-driven NLP and machine learning models to correlate linguistic features with clinical assessments, identifying sentiment and thematic elements predictive of PTSD severity, contributing to early detection and intervention.",
+          "Integrated multimodal data—language, audio, and video—to advance the understanding of psychological diagnostics, supporting the World Trade Center Health Program’s mission of improving mental well-being for individuals and communities."
+        ]
+      },
+      {
+        "role": "Research Software Engineer at Indian Institute of Technology, Delhi – Automation Industry Association Foundation for Smart Manufacturing ",
+        "timeframe": " Sep 2020 –  Nov 2021",
+        "description": [
+          "Developed a Cyber-physical system using Smart Manufacturing concepts, aiming to explore and enhance assembly processes automatically by a robot without requiring human involvement. The system comprised three key phases: storage and loading, storage and insertion of axisymmetric parts, and assembly and screwing of prismatic parts, all managed by a robotic arm. Technology stack: Python, OPC UA Communication protocol, Amazon EC2, Firestore.",
+          "Created a Digital Simulator and a Real-Time Dashboard using ReactJS for assembly machines, enabling the rapid testing of innovative manufacturing concepts without needing physical machines.",
+          "Developed a Mobile Application to calculate the Overall Equipment Effectiveness of the Lathe Machine, improving real-time tracking of machine efficiency. ",
+          "Mentored three summer interns working on the Real Time Dashboard development."
+        ]
+      },
+      {
+        "role": "Software Engineer at Indeses Business Venture",
+        "timeframe": "Jul 2020 – Jul 2023",
+        "description": [
+          "Architected and developed full-stack cross-platform Android and iOS applications utilizing Dart and Flutter, for E-Commerce, Education, and Fintech domains:  Eduk8me, TCHRTalk, Kalaam Telecom" ,
+          "Developed and integrated a Custom ChatBot using OpenAI API within a Flutter app, enabling conversational AI features with natural language understanding and real-time responses, enhancing user engagement.",
+          "Mentored two interns in Full Stack Mobile Development, providing deep-dive training on client-server architecture, stateful/stateless widget creation, and API endpoint integration in Flutter.",
+          "Managed deployment on both Google Play Store and Apple App Store, overseeing version control, debugging, and ensuring App Store compliance for smooth, timely releases."
+               ]
+      }
+      ,
+      {
+        "role": "Research Intern at Indian Institute of Technology Kanpur",
+        "timeframe": "Apr 2019 - Aug 2019",
+        "description": [
+          "Numerical Analysis and Optimization of the conversion efficiency of the Perovskite solar cells were carried out to obtain a maximum efficiency of 23.74%. "
+        ]
+      },
+      {
+        "role": "Research Intern at  Indian Institute of Technology Jodhpur",
+        "timeframe": "May 2018 - Jun 2018",
+        "description": [
+          "Performed Image Analysis by implementing Histogram Equalization and CDF-based transformations, which resulted in a 25% improvement in image contrast as measured by visual clarity in medical and satellite images. ",
+          "Presented a seminar covering the impact of image processing methods such as negative transformations, power-law transformations, and histogram matching, demonstrating up to 40% enhancement in image detail and clarity."
         ]
       }
     ],
     "skills": {
-      "programmingLanguages": ["Python", "JAVA", "Dart", "C", "Go"],
-      "operatingSystems": ["Windows", "MacOS", "Linux"],
-      "frameworksAndTechnologies": [
-        "TensorFlow", "PyTorch", "Flutter", "AWS", "Git", "MATLAB", "ReactJS",
-        "DLATK", "OpenCV", "Keras", "Figma", "MapReduce", "HDFS", "Google File System", "Spark"
-      ]
+      "programmingLanguages": "Python, JAVA, Dart, C, Go",
+      "operatingSystems": "Windows, MacOS, Linux ",
+      "frameworksAndTechnologies": "TensorFlow, PyTorch,  Flutter,  AWS, Git, MATLAB, ReactJS, DLATK, OpenCV, Keras,  MATLAB, Figma, ReactJS, MapReduce, Hadoop Distributed File System,  Google File System, Spark "
     },
     "awards": [
       {
@@ -165,7 +198,23 @@
         "position": "Vice President",
         "organization": "Sky Campus Happiness Club, Stony Brook University",
         "timeframe": "May 2024 - present"
+      },
+      {
+        "position": "Secretary",
+        "organization": "Indian Graduate Student Association, Stony Brook University",
+        "timeframe": "Sep 2024 - present"
+      },
+      {
+        "position": "Software Developer",
+        "organization": "Stony Brook Robotics Team, Stony Brook University",
+        "timeframe": "Sep 2023 - Mar 2024"
+      },
+      {
+        "position": "Member",
+        "organization": "Stony Brook Chess Club, Stony Brook University",
+        "timeframe": "Jan 2024 - present"
       }
+
     ],
     "certifications": [
       {
