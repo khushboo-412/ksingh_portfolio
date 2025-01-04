@@ -140,9 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = experienceArray.map(exp => {
       return `
         <div class="card">
-          <h3>${exp.role}</h3>
-          <div class="info-line"><strong>Organization:</strong><span>${exp.organization}</span></div>
-          <div class="info-line"><strong>Timeframe:</strong><span>${exp.timeframe}</span></div>
+<span><h3 style="display:inline">${exp.role}</h3> (${exp.timeframe})</span>
           <ul>
             ${exp.description.map(d => `<li>${d}</li>`).join('')}
           </ul>
@@ -154,9 +152,19 @@ document.addEventListener('DOMContentLoaded', () => {
   function populateSkills(skills) {
     const container = document.getElementById('skillsList');
     container.innerHTML = `
-      <div class="info-line"><strong>Programming Languages:</strong><span>${skills.programmingLanguages.join(', ')}</span></div>
-      <div class="info-line"><strong>Operating Systems:</strong><span>${skills.operatingSystems.join(', ')}</span></div>
-      <div class="info-line"><strong>Frameworks & Technologies:</strong><span>${skills.frameworksAndTechnologies.join(', ')}</span></div>
+             <div class="info-line">
+  <strong>Programming Languages:</strong>
+  <span>${skills.programmingLanguages}</span>
+</div>
+<div class="info-line">
+  <strong>Operating Systems:</strong>
+  <span>${skills.operatingSystems}</span>
+</div>
+<div class="info-line">
+  <strong>Frameworks & Technologies:</strong>
+  <span>${skills.frameworksAndTechnologies}</span>
+</div>
+
     `;
   }
   
@@ -178,10 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = leadershipArray.map(item => {
       return `
         <div class="card">
-          <h3>${item.position}</h3>
-          <div class="info-line"><strong>Organization:</strong><span>${item.organization}</span></div>
-          ${item.timeframe ? `<div class="info-line"><strong>Timeframe:</strong><span>${item.timeframe}</span></div>` : ''}
-          ${item.year ? `<div class="info-line"><strong>Year:</strong><span>${item.year}</span></div>` : ''}
+          <span><h3 style="display:inline">${item.organization}</h3> (${item.timeframe})</span>
+
+          <div class="info-line"><strong>Position:</strong><span>${item.position}</span></div>
         </div>
       `;
     }).join('');
