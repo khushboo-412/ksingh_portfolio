@@ -173,8 +173,8 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = awardsArray.map(award => {
       return `
         <div class="card">
-          <h3>${award.name}</h3>
-          <div class="info-line"><strong>Year:</strong><span>${award.year}</span></div>
+          <h3>${award.name} ${award.year}</h3>
+
           <div class="info-line"><strong>Awarded By:</strong><span>${award.awardedBy}</span></div>
         </div>
       `;
