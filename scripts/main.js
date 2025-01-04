@@ -111,11 +111,11 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = publicationsArray.map(pub => {
       return `
         <div class="card">
-          <h3>${pub.title}</h3>
+
+          <span><h3 style="display:inline">${pub.title} </h3>(${pub.type})</span>
           <div class="info-line"><strong>Conference:</strong><span>${pub.conference}${pub.venue}</span></div>
           <div class="info-line"><strong>Authors:</strong><span>${pub.authors}</span></div>
           <!--  <div class="info-line"><strong>Date:</strong><span>${pub.date}</span></div>  -->
-          <div class="info-line"><strong>Type:</strong><span>${pub.type}</span></div>
         </div>
       `;
     }).join('');
