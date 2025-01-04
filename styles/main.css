@@ -51,6 +51,21 @@ header {
   font-weight: 600;
   color: #fff;
 }
+.info-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px; /* Adjust gap between header and content */
+  margin-bottom: 8px; /* Adjust spacing between lines */
+}
+
+.info-line strong {
+  width: 250px; /* Set a fixed width for headers to ensure alignment */
+  text-align: left; /* Align header text to the left */
+}
+
+.info-line span {
+  flex: 1; /* Allow the content to take up the remaining space */
+}
 
 /* Navigation */
 .nav {
