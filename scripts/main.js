@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Intersection Observer for active section highlight
         const sections = document.querySelectorAll('section');
         const navLinks = document.querySelectorAll('.nav__link');
-        const options = {threshold: 0.6};
+        const options = {threshold: 0.3};
   
         const sectionObserver = new IntersectionObserver((entries) => {
           entries.forEach(entry => {
@@ -186,10 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
     container.innerHTML = leadershipArray.map(item => {
       return `
         <div class="card">
-          <span><h3 style="display:inline">${item.organization}</h3> (${item.timeframe})</span>
+          <span><h3 style="display:inline">${item.position} </h3>at ${item.organization} (${item.timeframe})</span>
 
-          <div class="info-line"><strong>Position:</strong><span>${item.position}</span></div>
-        </div>
+         </div>
       `;
     }).join('');
   }
