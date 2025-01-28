@@ -45,6 +45,13 @@
       }
     ],
     "publications": [
+        {
+        "title": "Representations from LLMs for Human-Centered NLP Tasks",
+        "conference": "NAACL 2025",
+        "venue": "",
+        "type": "Accepted",
+        "authors": "Nikita Soni, Pranav Chitale, Khushboo Singh, Niranjan Balasubramanian, and H. Andrew Schwartz"
+      },
       {
         "title": "A Systematic Evaluation of Transformer-LM Representations for Capturing Author States and Traits",
         "conference": "Association for Computational Linguistics (ACL 2024) Rolling Review",
