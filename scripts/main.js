@@ -82,10 +82,9 @@ document.addEventListener('DOMContentLoaded', () => {
         <a href="${info.github}" target="_blank">
         <img src="images/github-icon.png" alt="GitHub Icon" style="width:20px;vertical-align:middle;"/>
         </a>
-         <!-- Commented Google Scholar -->
-    <!-- <a href="${info.google_scholar}" target="_blank">
+   <a href="${info.google_scholar}" target="_blank">
     <img src="images/google-scholar-icon.png" alt="Google Scholar Icon" style="width:20px;vertical-align:middle;"/>
-    </a> -->
+    </a>
     `;
 
   }
