@@ -73,7 +73,6 @@ function populateEducation(items) {
       <h3 class="degree">${item.degree}</h3>
       <p class="school">${item.institution}</p>
       <p class="edu-meta">${item.timeframe} · GPA ${item.gpa}</p>
-      <p class="edu-detail">${item.detail}</p>
     </article>`).join('');
 }
 
