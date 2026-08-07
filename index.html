@@ -1,94 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Khushboo Singh</title>
-
-<link rel="stylesheet" href="styles/main.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Khushboo Singh — NLP and machine learning researcher working on human-centered AI, computational social science, and language technologies." />
+  <meta name="theme-color" content="#07111f" />
+  <title>Khushboo Singh | NLP & Machine Learning Researcher</title>
+  <link rel="stylesheet" href="styles/main.css" />
 </head>
 <body>
-<header>
-  <div class="header__inner">
-    <div class="header__logo" id="nameDisplay"></div>
-    <div class="nav__toggle" id="navToggle">
-      <div></div><div></div><div></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header__inner">
+      <a class="brand" href="#top" aria-label="Khushboo Singh, home">KS<span>.</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav aria-label="Primary navigation">
+        <ul class="nav" id="navMenu">
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#experience">Experience</a></li>
+          <li><a class="nav__link" href="#research">Research</a></li>
+          <li><a class="nav__link" href="#publications">Publications</a></li>
+          <li><a class="nav__link" href="#education">Education</a></li>
+          <li><a class="nav__link" href="#skills">Skills</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul class="nav" id="navMenu">
-        <li><a class="nav__link" href="#about">About</a></li>
-        <li><a class="nav__link" href="#education">Education</a></li>
-        <li><a class="nav__link" href="#publications">Publications</a></li>
-        <li><a class="nav__link" href="#academicProjects">Projects</a></li>
-        <li><a class="nav__link" href="#professionalExperience">Experience</a></li>
-        <li><a class="nav__link" href="#skills">Skills</a></li>
-        <li><a class="nav__link" href="#awards">Awards</a></li>
-        <li><a class="nav__link" href="#leadership">Leadership</a></li>
-        <li><a class="nav__link" href="#certifications">Certifications</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+  </header>
 
-<main>
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about__container">
-      <div class="about__image-container">
-        <img src="images/profile.jpg" alt="Your Photo" class="about__image" />
-        <div class="about__contacts" id="aboutContacts"></div>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero__content">
+        <p class="eyebrow" id="heroEyebrow"></p>
+        <h1 id="nameDisplay"></h1>
+        <p class="hero__title" id="heroTitle"></p>
+        <p class="hero__summary" id="heroSummary"></p>
+        <div class="hero__actions" id="heroActions"></div>
       </div>
-      <div class="about__details">
-        <p class="about__description" id="aboutDescription"></p>
+      <div class="hero__portrait-wrap">
+        <div class="portrait__halo"></div>
+        <img src="images/profile.jpg" alt="Khushboo Singh" class="hero__portrait" />
+        <div class="availability"><span></span> Human-centered AI · NLP · ML</div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="education">
-    <h2>Education</h2>
-    <div id="educationList"></div>
-  </section>
+    <div class="metrics" id="metricsList" aria-label="Career highlights"></div>
 
-  <section id="publications">
-    <h2>Publications</h2>
-    <div id="publicationsList"></div>
-  </section>
+    <section id="about" class="section-grid reveal">
+      <div class="section-heading">
+        <p class="section-number">01</p>
+        <h2>About</h2>
+      </div>
+      <div class="section-content">
+        <p class="about-copy" id="aboutDescription"></p>
+        <div class="focus-grid" id="focusList"></div>
+      </div>
+    </section>
 
-  <section id="academicProjects">
-    <h2>Academic Projects</h2>
-    <div id="projectsList"></div>
-  </section>
+    <section id="experience" class="section-grid reveal">
+      <div class="section-heading">
+        <p class="section-number">02</p>
+        <h2>Experience</h2>
+      </div>
+      <div class="section-content timeline" id="experienceList"></div>
+    </section>
 
-  <section id="professionalExperience">
-    <h2>Professional & Research Experience</h2>
-    <div id="experienceList"></div>
-  </section>
+    <section id="research" class="section-grid reveal">
+      <div class="section-heading">
+        <p class="section-number">03</p>
+        <h2>Selected Research</h2>
+      </div>
+      <div class="section-content project-grid" id="projectsList"></div>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <div id="skillsList"></div>
-  </section>
+    <section id="publications" class="section-grid reveal">
+      <div class="section-heading">
+        <p class="section-number">04</p>
+        <h2>Publications</h2>
+      </div>
+      <div class="section-content publication-list" id="publicationsList"></div>
+    </section>
 
-  <section id="awards">
-    <h2>Awards</h2>
-    <div id="awardsList"></div>
-  </section>
+    <section id="education" class="section-grid reveal">
+      <div class="section-heading">
+        <p class="section-number">05</p>
+        <h2>Education</h2>
+      </div>
+      <div class="section-content education-grid" id="educationList"></div>
+    </section>
 
-  <section id="leadership">
-    <h2>Leadership & Extracurricular Involvement</h2>
-    <div id="leadershipList"></div>
-  </section>
+    <section id="skills" class="section-grid reveal">
+      <div class="section-heading">
+        <p class="section-number">06</p>
+        <h2>Skills</h2>
+      </div>
+      <div class="section-content skills-grid" id="skillsList"></div>
+    </section>
 
-  <section id="certifications">
-    <h2>Certifications</h2>
-    <ul id="certificationsList"></ul>
-  </section>
-</main>
+    <section id="recognition" class="section-grid reveal">
+      <div class="section-heading">
+        <p class="section-number">07</p>
+        <h2>Recognition & Leadership</h2>
+      </div>
+      <div class="section-content recognition-grid">
+        <div><h3>Awards</h3><div id="awardsList"></div></div>
+        <div><h3>Leadership</h3><div id="leadershipList"></div></div>
+      </div>
+    </section>
 
-<footer>
-  &copy; <span id="year"></span> Khushboo Singh. All rights reserved.
-</footer>
+    <section class="contact-cta reveal" id="contact">
+      <p class="eyebrow">Let’s connect</p>
+      <h2>Building language technology around people, not just benchmarks.</h2>
+      <p>I’m interested in research and engineering at the intersection of NLP, machine learning, human behavior, and responsible AI.</p>
+      <div class="hero__actions" id="contactActions"></div>
+    </section>
+  </main>
 
-<script src="scripts/main.js"></script>
+  <footer>
+    <p>© <span id="year"></span> Khushboo Singh</p>
+    <p>Research · Language · Human-centered AI</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
 </body>
 </html>

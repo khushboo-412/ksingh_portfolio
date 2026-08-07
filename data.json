@@ -1,249 +1,166 @@
 {
-    "personalInfo": {
-      "name": "Khushboo Singh",
-      "email": "khusingh@cs.stonybrook.edu",
-      "linkedin": "https://linkedin.com/in/khushboo-singh-k412/",
-      "github": "https://github.com/khushboo-412/",
-      "google_scholar": "https://scholar.google.com/citations?user=yTGVWGcAAAAJ&hl=en&oi=ao",
-      "about": "I am currently pursuing a Master’s in Computer Science at Stony Brook University, where my research focuses on the transformative potential of Natural Language Processing (NLP) in modeling human behavior and affective states. My goal is to develop emotionally aware AI systems capable of interpreting complex psychological contexts using multimodal data, addressing challenges such as mental health diagnostics and enhancing emotional intelligence. Building on advancements in sentiment analysis and emotion recognition, I aim to create robust, interpretable NLP systems that bridge technical innovation and societal well-being, preparing for a future where technology serves as a force for inclusion and transformation."
+  "personalInfo": {
+    "name": "Khushboo Singh",
+    "eyebrow": "NLP · Machine Learning · Computational Social Science",
+    "title": "Staff Researcher building human-centered language technologies.",
+    "summary": "I develop NLP and machine learning systems that connect language with human behavior, psychological states, and real-world decision making — from multimodal PTSD research to on-device LLM evaluation.",
+    "about": "I am a Staff Researcher at Vanderbilt University’s Human Language Analysis Beings (HLAB), where I work at the intersection of natural language processing, machine learning, and computational social science. My research focuses on language-based psychological and behavioral assessment, transformer and LLM representations, multimodal modeling, and scalable NLP tools. I earned my M.S. in Computer Science from Stony Brook University in 2025 and bring more than three years of software engineering experience to research systems that need to work beyond the lab.",
+    "email": "khusingh@cs.stonybrook.edu",
+    "linkedin": "https://linkedin.com/in/khushboo-singh-k412/",
+    "github": "https://github.com/khushboo-412/",
+    "google_scholar": "https://scholar.google.com/citations?user=yTGVWGcAAAAJ&hl=en&oi=ao"
+  },
+  "metrics": [
+    { "value": "13", "label": "Transformer / LLM families benchmarked" },
+    { "value": "43", "label": "Psychological outcomes modeled" },
+    { "value": "10K+", "label": "Text and speech samples analyzed" },
+    { "value": "9+", "label": "LLM evaluation domains" }
+  ],
+  "focusAreas": [
+    { "title": "Human-centered NLP", "description": "Language signals for mental health, personality, affect, and behavior." },
+    { "title": "LLM evaluation", "description": "Representations, prompting, regression analysis, and domain-level quality." },
+    { "title": "Multimodal ML", "description": "Language, speech, acoustic, and behavioral features in robust research pipelines." }
+  ],
+  "professionalExperience": [
+    {
+      "role": "Staff Researcher",
+      "organization": "Vanderbilt University · Human Language Analysis Beings (HLAB)",
+      "timeframe": "Jul 2026 – Present",
+      "description": [
+        "Contribute to the $4M, 24-month ARPA-H EVIDENT initiative developing multimodal models for PTSD treatment response, safety-risk assessment, and treatment matching.",
+        "Build NLP and deep-learning pipelines for linguistic and acoustic biomarkers, representation learning, feature APIs, and reproducible QA workflows.",
+        "Develop scalable human-centered NLP methods that connect language with psychological and behavioral assessment."
+      ]
     },
-    "education": [
-      {
-        "degree": "M.S. in Computer Science",
-        "institution": "Stony Brook University, New York, USA",
-        "timeframe": "Aug 2023 - May 2025 (pursuing)",
-        "advisor": "Prof. H. Andrew Schwartz",
-        "gpa": "3.87/4",
-        "coursework": [
-          "Natural Language Processing",
-          "Machine Learning",
-          "Artificial Intelligence",
-          "Topics in Data Science",
-          "Theory of Database Systems",
-          "Theory of Computation",
-          "Hybrid Systems"
-        ]
-      },
-      {
-        "degree": "B. Tech. in Electrical Engineering and Computer Science",
-        "institution": "Dayalbagh Educational Institute, India",
-        "timeframe": "Jul 2016 - Jun 2020",
-        "advisor": "Prof. C. Patvardhan",
-        "gpa": "9.36/10",
-        "coursework": [
-          "Neural Networks",
-          "Digital Image Processing",
-          "Quantum Computing",
-          "Operating Systems",
-          "Software Engineering",
-          "Data Structures",
-          "Computer Architecture",
-          "Design and Analysis of Algorithms",
-          "Computer Networks",
-          "Digital Systems"
-        ]
-      }
-    ],
-    "publications": [
-        {
-        "title": "Evaluation of LLMs-based hidden states as Author Representations for Psychological Human-Centered NLP Tasks",
-        "conference": "NAACL 2025",
-        "venue": "",
-        "type": "Accepted",
-        "authors": "Nikita Soni, Pranav Chitale, Khushboo Singh, Niranjan Balasubramanian, and H. Andrew Schwartz"
-      },
-      {
-        "title": "A Systematic Evaluation of Transformer-LM Representations for Capturing Author States and Traits",
-        "conference": "Association for Computational Linguistics (ACL 2024) Rolling Review",
-        "venue": "",
-        "type": "Paper Sumbitted",
-        "authors": "Khushboo Singh, Vasudha Varadarajan, Adithya V. Ganesan, August Håkan Nilsson, Syeda Mahwish, Ryan L. Boyd, Lyle Ungar, Richard N. Rosenthal, H. Andrew Schwartz"
-      },
-      {
-        "title": "Commodity Market Forecasting using Natural Language Processing",
-        "conference": "25th ACM Conference on Economics and Computation",
-        "venue": ", Yale University",
-        "date": "July 2024",
-        "type": "Poster Presentation",
-        "authors": "Khushboo Singh, Dana Golden, Dikshya Mohanty"
-      },
-      {
-        "title": "Commodity Markets LLM-based Futures Forecasting",
-        "conference": "SAEA Annual Meeting 2025",
-        "venue": ", Irving, Texas",
-        "date": "2025",
-        "type": "Paper Proposal Accepted",
-        "authors": "Dana Golden, Dikshya Mohanty, Khushboo Singh"
-      }
-    ],
-    "academicProjects": [
-      {
-        "projectDescription": "Master’s Thesis at HLAB",
-        "institution": "Stony Brook University",
-        "timeframe": "May 2024 – present",
-        "title1": "Investigating the Efficacy of Open Large Language Models in Understanding Human Psychological States and Traits",
-        "title":"Master’s Thesis at Human Language Analysis Beings (HLAB), Stony Brook University ",
-        "details": [
-          "Utilized a wide range of LLM architectures—including RoBERTa, BERT, DeBERTa, GPT-2, XLNet, Llama2, Llama3, T5, and FLAN T5—to analyze the Data Science for Unhealthy Drinking (DS4UD) dataset, focusing on individuals with alcohol and substance use disorders.",
-          "Conducted Multi-Level Psychological Analysis to predict mental health indicators, personality traits, and emotional states (e.g., valence, arousal, anxiety, depression, and BIG-5 traits) by performing analyses at individual message level, two-week intervals, and comprehensive user profiles, uncovering temporal and contextual language patterns.",
-          "Assessed the effectiveness of different LLM types—autoencoders, autoregressive models, and encoder-decoder models—and contrasted embedding-based methods with prompting techniques to determine optimal approaches for modelling latent psychological constructs."
-          ]
-      },
-      {
-       
-        "title1": "Energy-related Commodities Market Analysis",
-        "details": [
-          "Developed a hybrid NLP and time-series forecasting model to predict future prices of commodities supported by economically sound explanations for price movements by integrating numerical data (prices) and textual data (EIA reports).",
-"Developed a time-series forecasting model utilizing a Time Series Transformer (TST), achieving MSE of 0.097 and MAPE of 0.26 when forecasting oil and natural gas prices, significantly outperforming traditional ARIMA models",
-"Pioneered Instruction Tuning using LLAMA2 (7B) and GPT2 (355M) models to generate economically sound explanations for price movements, implementing Parameter-Efficient Fine-Tuning (PEFT) with LoRA on LLAMA2 (reducing trainable parameters to 12.4% of the total) and full fine-tuning on GPT2.",
-"Developed cascading and joint model architectures to integrate outputs from the Time Series Transformer and LLAMA2, enhancing interpretability and robustness in commodity price forecasting and explanation tasks, thereby effectively bridging the gap between machine learning and economic analysis."
-
-          ]
-      },
-      {
-       
-        "title1": "LegiMed AI",
-        "details": [
-          "Developed an advanced medical document summarization system that combines LLaMA3, few-shot learning, and Chain-of-Thought prompting to generate step-by-step, concise, and legally relevant summaries tailored for lawyers.",
-"Designed and implemented a Retrieval-Augmented Generation (RAG) pipeline, integrating Facebook AI Similarity Search (FAISS) for efficient similarity search and PubMedBERT embeddings for domain-specific understanding, retrieving accurate context from datasets to improve the quality and relevance of summaries.",
-"Conducted comprehensive benchmarking by experimenting with state-of-the-art models such as T5, Flan-T5, BART, BioBART, and ChatGPT-4, evaluating contextual accuracy, domain specificity, and legal relevance to optimize model performance and workflow efficiency."
-          ]
-      },
-      {
-       
-        "title1": "Privacy Compliance Framework for Medical Mobile Apps ",
-        "details": [
-          "Developed a custom GPT model using OpenAI API to detect conditions and negations related to Personally Identifiable Information (PII) in privacy policies, achieving an 85% accuracy in identifying personal data mentions and discrepancies between privacy policies and app permissions. ",
-          "Utilized dependency parsing to systematically analyze conditions within privacy documents.",
-          "Implemented zero-shot and few-shot prompt engineering techniques to extract critical privacy compliance information."
-          ]
-      },
-      {
-       
-        "title1": "Analysis of Substance Use Treatment Admissions",
-        "details": [
-          "Utilizing Java, developed two key Hadoop programs to process and sort admissions by age and year, revealing insightful patterns over time, and efficiently identified distinct CBSAs using Hadoop's identity mapper and reducer concepts in Treatment Episode Data Set covering the years 2000 to 2019 (5.37 GB), to identify trends in admissions across different age groups and to pinpoint the unique Core Based Statistical Areas represented in the data. ",
-          "Replicated the age-year analysis using Spark to demonstrate improved processing speeds and data handling capabilities."
-          ]
-      },
-      {
-       
-        "title1": "Face Recognition-based Attendance System ",
-        "details": [
-          "Developed an advanced automated attendance system in Python using computer vision and machine learning algorithms for real-time facial recognition, implementing Haar cascades with OpenCV’s XML classifiers for robust face detection.", "Designed a multi-algorithm face recognition system by integrating Eigenface (PCA), Fisherface (LDA), and Local Binary Pattern Histogram (LBPH) in an ensemble model, enhancing accuracy through feature combination and comparative analysis."
-          ]
-      }
-
-    ],
-    "professionalExperience": [
-      {
-        "role": "Senior Research Aide at The Research Foundation for SUNY",
-        "organization": "The Research Foundation for SUNY",
-        "timeframe": "Sep 2024 – present",
-        "description": [
-          "Utilized transformer-based language models (RoBERTa) and topic modeling, alongside OpenAI’s Whisper, to analyze linguistic patterns and uncover themes indicative of mental health conditions such as Post-traumatic stress disorder (PTSD), depression (PHQ-9), and alcohol use (AUDIT) in 9/11 responders' speech data.  ",
-          "Developed and optimized AI-driven NLP and machine learning models to correlate linguistic features with clinical assessments, identifying sentiment and thematic elements predictive of PTSD severity, contributing to early detection and intervention.",
-          "Integrated multimodal data—language, audio, and video—to advance the understanding of psychological diagnostics, supporting the World Trade Center Health Program’s mission of improving mental well-being for individuals and communities."
-        ]
-      },
-      {
-        "role": "Research Software Engineer at Indian Institute of Technology, Delhi – Automation Industry Association Foundation for Smart Manufacturing ",
-        "timeframe": " Sep 2020 –  Nov 2021",
-        "description": [
-          "Developed a Cyber-physical system using Smart Manufacturing concepts, aiming to explore and enhance assembly processes automatically by a robot without requiring human involvement. The system comprised three key phases: storage and loading, storage and insertion of axisymmetric parts, and assembly and screwing of prismatic parts, all managed by a robotic arm. Technology stack: Python, OPC UA Communication protocol, Amazon EC2, Firestore.",
-          "Created a Digital Simulator and a Real-Time Dashboard using ReactJS for assembly machines, enabling the rapid testing of innovative manufacturing concepts without needing physical machines.",
-          "Developed a Mobile Application to calculate the Overall Equipment Effectiveness of the Lathe Machine, improving real-time tracking of machine efficiency. ",
-          "Mentored three summer interns working on the Real Time Dashboard development."
-        ]
-      },
-      {
-        "role": "Software Engineer at Indeses Business Venture",
-        "timeframe": "Jul 2020 – Jul 2023",
-        "description": [
-          "Architected and developed full-stack cross-platform Android and iOS applications utilizing Dart and Flutter, for E-Commerce, Education, and Fintech domains:  Eduk8me, TCHRTalk, Kalaam Telecom" ,
-          "Developed and integrated a Custom ChatBot using OpenAI API within a Flutter app, enabling conversational AI features with natural language understanding and real-time responses, enhancing user engagement.",
-          "Mentored two interns in Full Stack Mobile Development, providing deep-dive training on client-server architecture, stateful/stateless widget creation, and API endpoint integration in Flutter.",
-          "Managed deployment on both Google Play Store and Apple App Store, overseeing version control, debugging, and ensuring App Store compliance for smooth, timely releases."
-               ]
-      }
-      ,
-      {
-        "role": "Research Intern at Indian Institute of Technology Kanpur",
-        "timeframe": "Apr 2019 - Aug 2019",
-        "description": [
-          "Numerical Analysis and Optimization of the conversion efficiency of the Perovskite solar cells were carried out to obtain a maximum efficiency of 23.74%. "
-        ]
-      },
-      {
-        "role": "Research Intern at  Indian Institute of Technology Jodhpur",
-        "timeframe": "May 2018 - Jun 2018",
-        "description": [
-          "Performed Image Analysis by implementing Histogram Equalization and CDF-based transformations, which resulted in a 25% improvement in image contrast as measured by visual clarity in medical and satellite images. ",
-          "Presented a seminar covering the impact of image processing methods such as negative transformations, power-law transformations, and histogram matching, demonstrating up to 40% enhancement in image detail and clarity."
-        ]
-      }
-    ],
-    "skills": {
-      "programmingLanguages": "Python, JAVA, Dart, C, Go",
-      "operatingSystems": "Windows, MacOS, Linux ",
-      "frameworksAndTechnologies": "TensorFlow, PyTorch,  Flutter,  AWS, Git, MATLAB, ReactJS, DLATK, OpenCV, Keras,  MATLAB, Figma, ReactJS, MapReduce, Hadoop Distributed File System,  Google File System, Spark "
+    {
+      "role": "Visiting Scholar",
+      "organization": "Stony Brook University · HLAB",
+      "timeframe": "Jul 2025 – Jul 2026",
+      "description": [
+        "Analyzed 10K+ ecological momentary assessment texts to model longitudinal language patterns related to psychological states and traits.",
+        "Built speech-processing workflows over 10K+ samples using Whisper and Transformer models, with phonetic analysis using IPA, SAMPA, and Praat.",
+        "Studied language and speech signals associated with PTSD, depression (PHQ-9), and alcohol-use indicators."
+      ]
     },
-    "awards": [
-      {
-        "name": "Outstanding Employee Recognition",
-        "year": "2022",
-        "awardedBy": "Indeses Business Ventures Pvt Ltd"
-      },
-      {
-        "name": "Undergraduate Research Award",
-        "year": "2019",
-        "awardedBy": "Department of Physics & Computer Science, Dayalbagh Educational Institute"
-      }
-    ],
-    "leadership": [
-      {
-        "position": "Vice President",
-        "organization": "Sky Campus Happiness Club, Stony Brook University",
-        "timeframe": "May 2024 - present"
-      },
-      {
-        "position": "Secretary",
-        "organization": "Indian Graduate Student Association, Stony Brook University",
-        "timeframe": "Sep 2024 - present"
-      },
-      {
-        "position": "Software Developer",
-        "organization": "Stony Brook Robotics Team, Stony Brook University",
-        "timeframe": "Sep 2023 - Mar 2024"
-      },
-      {
-        "position": "Member",
-        "organization": "Stony Brook Chess Club, Stony Brook University",
-        "timeframe": "Jan 2024 - present"
-      }
-
-    ],
-    "certifications": [
-      {
-        "name": "Go: The Complete Developer's Guide (Golang)",
-        "link": "https://www.udemy.com/course/go-the-complete-developers-guide/"
-      },
-      {
-        "name": "Docker for absolute beginners: Online Project",
-        "link": "https://www.katacoda.com/courses/docker"
-      },
-      {
-        "name": "Supervised Machine Learning: Regression and Classification",
-        "link": "https://www.coursera.org/learn/machine-learning"
-      },
-      {
-        "name": "Unsupervised Learning, Recommenders, Reinforcement Learning",
-        "link": "https://www.coursera.org/learn/machine-learning-projects"
-      },
-      {
-        "name": "Advanced Learning Algorithm",
-        "link": "https://www.coursera.org/learn/advanced-learning-algorithms"
-      }
-    ]
-  }
-  
+    {
+      "role": "Machine Learning Linguist II",
+      "organization": "Meta Reality Labs · Seattle, WA",
+      "timeframe": "Oct 2025 – Feb 2026",
+      "description": [
+        "Evaluated on-device LLM behavior for Ray-Ban Meta Glasses across multilingual voice-assistant experiences, including invocation failures, false captures, intent recognition, and domain routing.",
+        "Built F1-based evaluation and observability workflows across 9+ domains to identify regressions and prioritize high-impact language quality issues.",
+        "Created multilingual Natural Invocation data patches and collaborated cross-functionally on model quality improvements."
+      ]
+    },
+    {
+      "role": "Senior Research Aide",
+      "organization": "The Research Foundation for SUNY · World Trade Center Health Program",
+      "timeframe": "Sep 2024 – Dec 2024",
+      "description": [
+        "Developed Whisper and Transformer-based ASR/NLP pipelines for 10K+ speech samples from 9/11 responders.",
+        "Analyzed linguistic patterns associated with PTSD, depression, anxiety, and alcohol-use measures to support mental-health research."
+      ]
+    },
+    {
+      "role": "Software Engineer",
+      "organization": "Indeses Business Ventures",
+      "timeframe": "Jul 2020 – Jul 2023",
+      "description": [
+        "Built production applications across e-commerce, education, fintech, search, ranking, and conversational AI using Python, Flutter, React, and cloud services.",
+        "Delivered and maintained multiple cross-platform products while mentoring junior developers and supporting release workflows."
+      ]
+    }
+  ],
+  "academicProjects": [
+    {
+      "title": "Transformer Representations for Human States & Traits",
+      "tag": "M.S. Thesis · ACL 2025",
+      "summary": "Systematic evaluation of language-model representations for psychological human-centered NLP across multiple temporal levels.",
+      "highlights": [
+        "Benchmarked 13 Transformer/LLM families across 43 outcomes spanning affect, substance use, mental health, sociodemographics, and personality.",
+        "Achieved Pearson r ≈ 0.6 for mental-health outcomes and r > 0.7 for personality traits using stratified 10-fold Ridge Regression."
+      ]
+    },
+    {
+      "title": "ARPA-H EVIDENT",
+      "tag": "Multimodal Health AI",
+      "summary": "Federally funded research on data-driven PTSD care using multimodal behavioral and clinical signals.",
+      "highlights": [
+        "Developing language and acoustic representations for treatment-response and safety-risk modeling.",
+        "Building reusable NLP feature extraction, validation, and QA pipelines for downstream modeling."
+      ]
+    },
+    {
+      "title": "LegiMed AI",
+      "tag": "RAG · LLaMA 3",
+      "summary": "Medical-document summarization designed for legally relevant review workflows.",
+      "highlights": [
+        "Combined LLaMA 3, few-shot prompting, FAISS retrieval, and PubMedBERT embeddings.",
+        "Benchmarked T5, FLAN-T5, BART, BioBART, and GPT-based approaches for contextual accuracy and domain relevance."
+      ]
+    },
+    {
+      "title": "Commodity Market Forecasting",
+      "tag": "NLP · Time Series",
+      "summary": "Explainable energy-market forecasting that combines numerical futures data with language from EIA reports.",
+      "highlights": [
+        "Combined Time Series Transformers with LLaMA 2 and GPT-2 to forecast energy prices and generate explanations.",
+        "Explored cascading and joint multimodal architectures for interpretable forecasting."
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "year": "2025",
+      "title": "Systematic Evaluation of Auto-Encoding and Large Language Model Representations for Capturing Author States and Traits",
+      "authors": "Khushboo Singh, Vasudha Varadarajan, Adithya V. Ganesan, August Håkan Nilsson, Nikita Soni, Syeda Mahwish, Pranav Chitale, Ryan L. Boyd, Lyle Ungar, Richard N. Rosenthal, H. Andrew Schwartz",
+      "venue": "Findings of the Association for Computational Linguistics: ACL 2025",
+      "link": "https://aclanthology.org/2025.findings-acl.971/"
+    },
+    {
+      "year": "2025",
+      "title": "Evaluation of LLMs-based Hidden States as Author Representations for Psychological Human-Centered NLP Tasks",
+      "authors": "Nikita Soni, Pranav Chitale, Khushboo Singh, Niranjan Balasubramanian, H. Andrew Schwartz",
+      "venue": "Findings of the Association for Computational Linguistics: NAACL 2025",
+      "link": "https://aclanthology.org/2025.findings-naacl.426/"
+    },
+    {
+      "year": "2024",
+      "title": "Commodity Market Forecasting using Natural Language Processing",
+      "authors": "Dana Golden, Dikshya Mohanty, Khushboo Singh",
+      "venue": "25th ACM Conference on Economics and Computation · Poster",
+      "link": "https://www.stonybrook.edu/commcms/bias-nrt/_pdf/Golden%20ACM_Commodity_Market_Forecasting_using_Natural_Language_Processing_Poster.pdf"
+    }
+  ],
+  "education": [
+    {
+      "degree": "M.S. in Computer Science",
+      "institution": "Stony Brook University",
+      "timeframe": "Aug 2023 – May 2025",
+      "gpa": "3.85 / 4.00",
+      "detail": "Advisor: H. Andrew Schwartz · Thesis focused on Transformer/LLM representations for psychological author states and traits."
+    },
+    {
+      "degree": "B.Tech. in Electrical Engineering & Computer Science",
+      "institution": "Dayalbagh Educational Institute",
+      "timeframe": "Jul 2016 – Jun 2020",
+      "gpa": "9.36 / 10.00",
+      "detail": "Ranked 2nd of 74 students · Research spanning machine learning, image processing, and computational systems."
+    }
+  ],
+  "skills": {
+    "Languages & Data": ["Python", "SQL", "Java", "Dart", "C", "Go", "PostgreSQL", "MySQL"],
+    "NLP & Machine Learning": ["PyTorch", "TensorFlow", "Hugging Face Transformers", "LLM Evaluation", "Whisper", "DLATK", "FAISS", "RAG", "scikit-learn"],
+    "Language & Speech": ["ASR/NLP Pipelines", "IPA", "SAMPA", "ToBI", "Praat", "Linguistic Error Analysis", "Multilingual Evaluation"],
+    "Engineering & Cloud": ["AWS", "GCP", "Docker", "Kubernetes", "FastAPI", "Flask", "React", "Flutter", "Git", "Spark", "Hadoop"]
+  },
+  "awards": [
+    { "name": "Outstanding Employee Recognition", "year": "2022", "awardedBy": "Indeses Business Ventures" },
+    { "name": "Undergraduate Research Award", "year": "2019", "awardedBy": "Dayalbagh Educational Institute" }
+  ],
+  "leadership": [
+    { "position": "Secretary", "organization": "Indian Graduate Student Association · Stony Brook University", "timeframe": "Sep 2024 – May 2025" },
+    { "position": "Vice President", "organization": "Sky Campus Happiness Club · Stony Brook University", "timeframe": "May 2024 – May 2025" },
+    { "position": "Software Developer", "organization": "Stony Brook Robotics Team", "timeframe": "Sep 2023 – Mar 2024" }
+  ]
+}

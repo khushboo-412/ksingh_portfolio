@@ -1,201 +1,137 @@
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('data.json')
-      .then(response => response.json())
-      .then(data => {
-        populatePersonalInfo(data.personalInfo);
-        populateEducation(data.education);
-        populatePublications(data.publications);
-        populateProjects(data.academicProjects);
-        populateExperience(data.professionalExperience);
-        populateSkills(data.skills);
-        populateAwards(data.awards);
-        populateLeadership(data.leadership);
-        populateCertifications(data.certifications);
-  
-        // Set current year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-        
-        // Handle mobile nav toggle
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
-        navToggle.addEventListener('click', () => {
-          navMenu.classList.toggle('open');
-        });
-  
-        // Add fade-in class to all sections
-        document.querySelectorAll('section').forEach(sec => sec.classList.add('fade-in'));
-  
-        // Intersection Observer for fade-in
-        const fadeObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if(entry.isIntersecting) {
-              entry.target.classList.add('visible');
-              fadeObserver.unobserve(entry.target);
-            }
-          });
-        }, {threshold: 0.1});
-  
-        document.querySelectorAll('section').forEach(sec => {
-          fadeObserver.observe(sec);
-        });
-  
-        // Intersection Observer for active section highlight
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.nav__link');
-        const options = {threshold: 0.3};
-  
-        const sectionObserver = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if(entry.isIntersecting) {
-              const id = entry.target.getAttribute('id');
-              navLinks.forEach(link => {
-                link.classList.toggle('nav__link--active', link.getAttribute('href') === `#${id}`);
-              });
-            }
-          });
-        }, options);
-  
-        sections.forEach(section => {
-          sectionObserver.observe(section);
-        });
-  
-      })
-      .catch(error => console.error('Error loading data:', error));
+document.addEventListener('DOMContentLoaded', async () => {
+  try {
+    const response = await fetch('data.json');
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+
+    populatePersonalInfo(data.personalInfo);
+    populateMetrics(data.metrics);
+    populateFocus(data.focusAreas);
+    populateExperience(data.professionalExperience);
+    populateProjects(data.academicProjects);
+    populatePublications(data.publications);
+    populateEducation(data.education);
+    populateSkills(data.skills);
+    populateRecognition('awardsList', data.awards, item => `${item.name}`, item => `${item.awardedBy} · ${item.year}`);
+    populateRecognition('leadershipList', data.leadership, item => item.position, item => `${item.organization} · ${item.timeframe}`);
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    setupNavigation();
+    setupReveal();
+  } catch (error) {
+    console.error('Unable to load portfolio data:', error);
+    document.getElementById('heroSummary').textContent = 'Portfolio content is temporarily unavailable. Please refresh the page.';
+  }
+});
+
+function populatePersonalInfo(info) {
+  document.getElementById('nameDisplay').textContent = info.name;
+  document.getElementById('heroEyebrow').textContent = info.eyebrow;
+  document.getElementById('heroTitle').textContent = info.title;
+  document.getElementById('heroSummary').textContent = info.summary;
+  document.getElementById('aboutDescription').textContent = info.about;
+
+  const buttons = `
+    <a class="button button--primary" href="mailto:${info.email}">Email me ↗</a>
+    <a class="button" href="${info.linkedin}" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+    <a class="button" href="${info.github}" target="_blank" rel="noreferrer">GitHub ↗</a>
+    <a class="button" href="${info.google_scholar}" target="_blank" rel="noreferrer">Google Scholar ↗</a>`;
+  document.getElementById('heroActions').innerHTML = buttons;
+  document.getElementById('contactActions').innerHTML = buttons;
+}
+
+function populateMetrics(metrics) {
+  document.getElementById('metricsList').innerHTML = metrics.map(item => `
+    <div class="metric"><strong>${item.value}</strong><span>${item.label}</span></div>`).join('');
+}
+
+function populateFocus(items) {
+  document.getElementById('focusList').innerHTML = items.map(item => `
+    <div class="focus-card"><strong>${item.title}</strong><span>${item.description}</span></div>`).join('');
+}
+
+function populateExperience(items) {
+  document.getElementById('experienceList').innerHTML = items.map(item => `
+    <article class="timeline-item">
+      <div class="item-meta"><h3>${item.role}</h3><time>${item.timeframe}</time></div>
+      <p class="organization">${item.organization}</p>
+      <ul>${item.description.map(line => `<li>${line}</li>`).join('')}</ul>
+    </article>`).join('');
+}
+
+function populateProjects(items) {
+  document.getElementById('projectsList').innerHTML = items.map(item => `
+    <article class="project-card">
+      <div class="project-card__top"><h3>${item.title}</h3><span class="project-tag">${item.tag}</span></div>
+      <p>${item.summary}</p>
+      <ul>${item.highlights.map(line => `<li>${line}</li>`).join('')}</ul>
+    </article>`).join('');
+}
+
+function populatePublications(items) {
+  document.getElementById('publicationsList').innerHTML = items.map(item => `
+    <article class="publication">
+      <span class="publication__year">${item.year}</span>
+      <div><h3>${item.title}</h3><p>${item.authors}</p><p>${item.venue}</p></div>
+      ${item.link ? `<a class="publication__link" href="${item.link}" target="_blank" rel="noreferrer">View paper ↗</a>` : ''}
+    </article>`).join('');
+}
+
+function populateEducation(items) {
+  document.getElementById('educationList').innerHTML = items.map(item => `
+    <article class="education-card">
+      <h3 class="degree">${item.degree}</h3>
+      <p class="school">${item.institution}</p>
+      <p class="edu-meta">${item.timeframe} · GPA ${item.gpa}</p>
+      <p class="edu-detail">${item.detail}</p>
+    </article>`).join('');
+}
+
+function populateSkills(groups) {
+  document.getElementById('skillsList').innerHTML = Object.entries(groups).map(([name, skills]) => `
+    <div class="skill-group"><h3>${name}</h3><div class="skill-tags">${skills.map(skill => `<span class="skill-tag">${skill}</span>`).join('')}</div></div>`).join('');
+}
+
+function populateRecognition(target, items, title, detail) {
+  document.getElementById(target).innerHTML = items.map(item => `
+    <div class="recognition-item"><strong>${title(item)}</strong><span>${detail(item)}</span></div>`).join('');
+}
+
+function setupNavigation() {
+  const toggle = document.getElementById('navToggle');
+  const menu = document.getElementById('navMenu');
+  const links = [...document.querySelectorAll('.nav__link')];
+  toggle.addEventListener('click', () => {
+    const open = menu.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
   });
-  
-  function populatePersonalInfo(info) {
-    const nameDisplay = document.getElementById('nameDisplay');
-    const aboutContacts = document.getElementById('aboutContacts');
-    const aboutDescription = document.getElementById('aboutDescription');
-    
-    nameDisplay.textContent = info.name;
-    aboutDescription.textContent = info.about;
-    
-    // Using custom icons from images folder
-    aboutContacts.innerHTML = `
-        <a href="mailto:${info.email}">
-        <img src="images/email-icon.png" alt="Email Icon" style="width:20px;vertical-align:middle;"/>
-        </a>
-        <a href="${info.linkedin}" target="_blank">
-        <img src="images/linkedin-icon.png" alt="LinkedIn Icon" style="width:20px;vertical-align:middle;"/>
-        </a>
-        <a href="${info.github}" target="_blank">
-        <img src="images/github-icon.png" alt="GitHub Icon" style="width:20px;vertical-align:middle;"/>
-        </a>
-   <a href="${info.google_scholar}" target="_blank">
-    <img src="images/google-scholar-icon.png" alt="Google Scholar Icon" style="width:20px;vertical-align:middle;"/>
-    </a>
-    `;
+  links.forEach(link => link.addEventListener('click', () => {
+    menu.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
 
-  }
-  
-  function populateEducation(educationArray) {
-    const container = document.getElementById('educationList');
-    container.innerHTML = educationArray.map(item => {
-      return `
-        <div class="card">
-          <h3>${item.degree}</h3>
-          <div class="info-line"><strong>Institution:</strong><span>${item.institution}</span></div>
-          <div class="info-line"><strong>Timeframe:</strong><span>${item.timeframe}</span></div>
-          <div class="info-line"><strong>Advisor:</strong><span>${item.advisor}</span></div>
-          <div class="info-line"><strong>GPA:</strong><span>${item.gpa}</span></div>
-          <div class="info-line"><strong>Coursework:</strong><span>${item.coursework.join(', ')}</span></div>
-        </div>
-      `;
-    }).join('');
-  }
-  
-  function populatePublications(publicationsArray) {
-    const container = document.getElementById('publicationsList');
-    container.innerHTML = publicationsArray.map(pub => {
-      return `
-        <div class="card">
+  const sections = [...document.querySelectorAll('main section[id]')];
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      links.forEach(link => link.classList.toggle('nav__link--active', link.getAttribute('href') === `#${entry.target.id}`));
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+  sections.forEach(section => observer.observe(section));
+}
 
-          <span><h3 style="display:inline">${pub.title} </h3>(${pub.type})</span>
-          <div class="info-line"><strong>Conference:</strong><span>${pub.conference}${pub.venue}</span></div>
-          <div class="info-line"><strong>Authors:</strong><span>${pub.authors}</span></div>
-          <!--  <div class="info-line"><strong>Date:</strong><span>${pub.date}</span></div>  -->
-        </div>
-      `;
-    }).join('');
+function setupReveal() {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    return;
   }
-  
-  function populateProjects(projectsArray) {
-    const container = document.getElementById('projectsList');
-    container.innerHTML = projectsArray.map(project => {
-      return `
-        <div class="card">
-          <h3>${project.title1}</h3>
-          <ul>
-            ${project.details.map(detail => `<li>${detail}</li>`).join('')}
-          </ul>
-        </div>
-      `;
-    }).join('');
-  }
-  
-  function populateExperience(experienceArray) {
-    const container = document.getElementById('experienceList');
-    container.innerHTML = experienceArray.map(exp => {
-      return `
-        <div class="card">
-<span><h3 style="display:inline">${exp.role}</h3> (${exp.timeframe})</span>
-          <ul>
-            ${exp.description.map(d => `<li>${d}</li>`).join('')}
-          </ul>
-        </div>
-      `;
-    }).join('');
-  }
-  
-  function populateSkills(skills) {
-    const container = document.getElementById('skillsList');
-    container.innerHTML = `
-             <div class="info-line">
-  <strong>Programming Languages:</strong>
-  <span>${skills.programmingLanguages}</span>
-</div>
-<div class="info-line">
-  <strong>Operating Systems:</strong>
-  <span>${skills.operatingSystems}</span>
-</div>
-<div class="info-line">
-  <strong>Frameworks & Technologies:</strong>
-  <span>${skills.frameworksAndTechnologies}</span>
-</div>
-
-    `;
-  }
-  
-  function populateAwards(awardsArray) {
-    const container = document.getElementById('awardsList');
-    container.innerHTML = awardsArray.map(award => {
-      return `
-        <div class="card">
-          <h3>${award.name} ${award.year}</h3>
-
-          <div class="info-line"><strong>Awarded By:</strong><span>${award.awardedBy}</span></div>
-        </div>
-      `;
-    }).join('');
-  }
-  
-  function populateLeadership(leadershipArray) {
-    const container = document.getElementById('leadershipList');
-    container.innerHTML = leadershipArray.map(item => {
-      return `
-        <div class="card">
-          <span><h3 style="display:inline">${item.position} </h3>at ${item.organization} (${item.timeframe})</span>
-
-         </div>
-      `;
-    }).join('');
-  }
-  
-  function populateCertifications(certificationsArray) {
-    const container = document.getElementById('certificationsList');
-    container.innerHTML = certificationsArray.map(cert => 
-      `<li><a href="${cert.link}" target="_blank">${cert.name}</a></li>`
-    ).join('');
-  }
-  
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
