@@ -2,9 +2,9 @@
   "personalInfo": {
     "name": "Khushboo Singh",
     "eyebrow": "NLP · Machine Learning · Computational Social Science",
-    "title": "Staff Researcher building human-centered language technologies.",
+    "title": "Research Assistant building human-centered language technologies.",
     "summary": "I develop NLP and machine learning systems that connect language with human behavior, psychological states, and real-world decision making — from multimodal PTSD research to on-device LLM evaluation.",
-    "about": "I am a Staff Researcher at Vanderbilt University’s Human Language Analysis Beings (HLAB), where I work at the intersection of natural language processing, machine learning, and computational social science. My research focuses on language-based psychological and behavioral assessment, transformer and LLM representations, multimodal modeling, and scalable NLP tools. I earned my M.S. in Computer Science from Stony Brook University in 2025 and bring more than three years of software engineering experience to research systems that need to work beyond the lab.",
+    "about": "I am a Research Assistant at Vanderbilt University’s Human Language Analysis Beings (HLAB), where I work at the intersection of natural language processing, machine learning, and computational social science. My research focuses on language-based psychological and behavioral assessment, transformer and LLM representations, multimodal modeling, and scalable NLP tools. I earned my M.S. in Computer Science from Stony Brook University in 2025 and bring more than three years of software engineering experience to research systems that need to work beyond the lab.",
     "email": "khusingh@cs.stonybrook.edu",
     "linkedin": "https://linkedin.com/in/khushboo-singh-k412/",
     "github": "https://github.com/khushboo-412/",
@@ -23,7 +23,7 @@
   ],
   "professionalExperience": [
     {
-      "role": "Staff Researcher",
+      "role": "Research Assistant",
       "organization": "Vanderbilt University · Human Language Analysis Beings (HLAB)",
       "timeframe": "Jul 2026 – Present",
       "description": [
