@@ -7,7 +7,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     populatePersonalInfo(data.personalInfo);
     populateMetrics(data.metrics);
     populateFocus(data.focusAreas);
-    populateExperience(data.professionalExperience);
     populateProjects(data.academicProjects);
     populatePublications(data.publications);
     populateEducation(data.education);
@@ -48,15 +47,6 @@ function populateMetrics(metrics) {
 function populateFocus(items) {
   document.getElementById('focusList').innerHTML = items.map(item => `
     <div class="focus-card"><strong>${item.title}</strong><span>${item.description}</span></div>`).join('');
-}
-
-function populateExperience(items) {
-  document.getElementById('experienceList').innerHTML = items.map(item => `
-    <article class="timeline-item">
-      <div class="item-meta"><h3>${item.role}</h3><time>${item.timeframe}</time></div>
-      <p class="organization">${item.organization}</p>
-      <ul>${item.description.map(line => `<li>${line}</li>`).join('')}</ul>
-    </article>`).join('');
 }
 
 function populateProjects(items) {
